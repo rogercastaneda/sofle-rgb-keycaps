@@ -1,0 +1,15 @@
+Hola, necesito ayuda con la configuración del teclado. Les cuento lo que pasó:
+
+Al recibir el teclado noté que varias teclas no correspondían a las etiquetas de los keycaps. Por ejemplo, la tecla etiquetada como "Shift" no funcionaba y la etiquetada "Caps" actuaba como Shift.
+
+Intenté resolver esto con el archivo .hex que me enviaron. Usé QMK Toolbox para flashear. Para entrar en modo bootloader presioné unos botones pequeños que encontré sobre los conectores jack 3.5mm de cada mitad (primero el derecho, luego el izquierdo). Asumo que son los botones de reset, ya que no aparecen mencionados en el PDF que descargué desde el QR incluido en la caja. El proceso aparentemente fue exitoso — avrdude confirmó que se escribieron y verificaron 26680 bytes.
+
+Sin embargo, después del flash el problema persiste: la tecla "Shift" sigue sin funcionar como Ctrl (que es lo que debería hacer según el keymap del firmware).
+
+Mis preguntas son:
+
+1. ¿El archivo .hex que me enviaron es el mismo que usaron para configurar mi teclado originalmente?
+2. ¿El orden en que se presionan los botones de reset de cada mitad importa?
+3. ¿Hay algún paso adicional después del flash para que el keymap quede activo?
+
+Gracias
