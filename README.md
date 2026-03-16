@@ -6,14 +6,15 @@ Teclado mecánico split Sofle RGB comprado a Zonekeyboards (Chile), con keycaps 
 
 ```
 sofle-rgb-keycaps/
-├── sofle_keycaps/                  # 56 SVGs de los keycaps (L1-L28, R1-R28)
-├── sofle_rev1_zonekeyboards.hex    # Firmware original enviado por Zonekeyboards (no usar)
-├── ESQUEMA_COLORES_SOFLE_CLEAN.md  # Esquema de colores de keycaps
-├── TEST_KEYMAP.md                  # Tabla de pruebas del keymap actual
-├── EMAIL_ZONEKEYBOARDS.txt         # Historial de comunicación con proveedor
-├── generate_keycaps.py             # Script que generó los SVGs
-├── SofleV2.pdf                     # Manual del teclado
-└── CLAUDE.md                       # Contexto del proyecto para Claude Code
+├── firmware/
+│   └── v1/
+│       ├── keymap.md                        # Distribución completa de teclas por capa
+│       ├── build.md                         # Versión QMK, comando de compilación, cambios de API
+│       └── sofle_rev1_zonekeyboards_en.hex  # Hex compilado (copiar desde Linux)
+├── sofle_keycaps/      # 56 SVGs de los keycaps (L1-L28, R1-R28)
+├── generate_keycaps.py # Script que generó los SVGs
+├── SofleV2.pdf         # Manual del teclado
+└── CLAUDE.md           # Contexto del proyecto para Claude Code
 ```
 
 El firmware compilado y activo vive en `~/qmk_firmware/` (Linux).
@@ -145,7 +146,7 @@ avrdude -p atmega32u4 -c avr109 -P /dev/ttyACM0 -b 57600 -D \
 
 ## Keymap actual
 
-Ver `TEST_KEYMAP.md` para la distribución completa de teclas por capa.
+Ver `firmware/v1/keymap.md` para la distribución completa de teclas por capa.
 
 ### Resumen rápido
 
